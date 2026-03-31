@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scholarship Recommendation System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">ScholarshipSys</div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Scholarships</a></li>
+      <li><a href="#">Career Guidance</a></li>
+      <li><a href="#">Loan Guidance</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <select id="language-switch">
+      <option value="en">English</option>
+      <option value="ta">தமிழ்</option>
+      <option value="hi">हिंदी</option>
+    </select>
+  </nav>
+
+  <!-- Landing Page -->
+  <section class="landing">
+    <h2 id="landing-title">Dream big,we'll guide you - Your future starts here</h2>
+    <div class="card-container">
+      <div class="card" onclick="openLogin('student')">
+        <h2>🎓 Student Login</h2>
+      </div>
+      <div class="card" onclick="openLogin('admin')">
+        <h2>👨‍💼 Administrator Login</h2>
+      </div>
+      <div class="card" onclick="openLogin('sponsor')">
+        <h2>🏢 Sponsor Login</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="login-title">Login</h2>
+      <form id="login-form">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <p>Don't have an account? <a href="#">Register</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Chatbot -->
+  <button id="chatbot-btn">💬</button>
+  <div id="chatbot-window" class="chatbot">
+    <div class="chat-header">ScholarshipBot</div>
+    <div class="chat-body" id="chat-body">
+      <p><b>Bot:</b> Hi! How can I help you?</p>
+    </div>
+    <input type="text" id="chat-input" placeholder="Type a message...">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
