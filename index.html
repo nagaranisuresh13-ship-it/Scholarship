@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Innovatable - Welcome Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url("images/stars-bg.jpeg") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: white;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .greeting {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: red;
+      text-shadow: 0 0 15px rgba(255,0,0,0.9), 0 0 30px rgba(255,0,0,0.6);
+    }
+    .subtext {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: #eee;
+      margin-bottom: 30px;
+      text-shadow: 0 0 8px rgba(255,255,255,0.6);
+    }
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 350px;
+      height: 220px;
+      margin: auto;
+    }
+    .motivational-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+    .motivational-img:hover {
+      transform: scale(1.08);
+      transition: transform 0.3s ease;
+    }
+    .btn-sponsor {
+      border-color: violet;
+      color: violet;
+      box-shadow: 0 0 10px rgba(238,130,238,0.7);
+    }
+    .btn-sponsor:hover {
+      background-color: violet;
+      color: white;
+      box-shadow: 0 0 20px rgba(238,130,238,1);
+    }
+  </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+  <div class="container text-center">
+    <!-- Logo -->
+    <img src="logo.JPEG.jpeg" alt="Innovatable Logo" class="logo">
+
+    <!-- Greeting -->
+    <div class="greeting">Welcome Achiever!!</div>
+    <div class="subtext">Dream big, we'll guide you — your future starts here.</div>
+
+    <!-- Motivational Images -->
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="image-container">
+          <img src="images/success.JPEG.jpeg" alt="Success" class="motivational-img">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image-container">
+          <img src="images/teamwork.JPEG.jpeg" alt="Teamwork" class="motivational-img">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="image-container">
+          <img src="images/dream.JPEG.jpeg" alt="Dream Big" class="motivational-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- Role Selection Buttons -->
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <button class="btn btn-outline-primary w-100">Administrator</button>
+      </div>
+      <div class="col-md-4">
+        <!-- Student button redirects to student.html -->
+        <button class="btn btn-outline-success w-100" onclick="openStudentPage()">Student</button>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sponsor w-100">Sponsor</button>
+      </div>
+    </div>
+
+    <p class="mt-3">Already have an account? <a href="#">Login</a></p>
+  </div>
+
+  <script>
+    function openStudentPage() {
+      // Redirects to student.html
+      window.location.href = "student.html";
+    }
+  </script>
+</body>
+</html>
