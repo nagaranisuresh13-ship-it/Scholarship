@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Select Language</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      background: url("images/background.jpeg") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .container {
+      background: rgba(0,0,0,0.6);
+      padding: 30px;
+      border-radius: 15px;
+      display: inline-block;
+    }
+    input, select, button {
+      margin: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      background-color: #FFD700;
+      color: black;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: orange;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Select Your Language</h2>
+
+    <!-- Search Bar -->
+    <input type="text" id="searchBar" placeholder="Search language..." onkeyup="filterLanguages()">
+
+    <!-- Language Dropdown -->
+    <select id="languageSelect" size="10" style="width:200px;">
+      <option value="en">English</option>
+      <option value="hi">Hindi</option>
+      <option value="bn">Bengali</option>
+      <option value="te">Telugu</option>
+      <option value="mr">Marathi</option>
+      <option value="ta">Tamil</option>
+      <option value="ur">Urdu</option>
+      <option value="gu">Gujarati</option>
+      <option value="kn">Kannada</option>
+      <option value="or">Odia</option>
+      <option value="ml">Malayalam</option>
+      <option value="pa">Punjabi</option>
+      <option value="as">Assamese</option>
+      <option value="ks">Kashmiri</option>
+      <option value="ne">Nepali</option>
+      <option value="sd">Sindhi</option>
+      <option value="sa">Sanskrit</option>
+      <option value="doi">Dogri</option>
+      <option value="mni">Manipuri</option>
+      <option value="bho">Bodo</option>
+      <option value="sat">Santali</option>
+      <option value="mai">Maithili</option>
+    </select>
+    <br><br>
+    <button onclick="goToLogin()">Continue</button>
+  </div>
+
+  <script>
+    function filterLanguages() {
+      let input = document.getElementById("searchBar").value.toLowerCase();
+      let options = document.getElementById("languageSelect").options;
+      for (let i = 0; i < options.length; i++) {
+        let txt = options[i].text.toLowerCase();
+        options[i].style.display = txt.includes(input) ? "" : "none";
+      }
+    }
+
+    function goToLogin() {
+      let lang = document.getElementById("languageSelect").value;
+      localStorage.setItem("selectedLang", lang);
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>
